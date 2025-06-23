@@ -2,7 +2,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WINDOW_WIDTH, COLOR_ORANGE, MENU_OPTION, COLOR_WHITE
+from code.Const import WINDOW_WIDTH, COLOR_ORANGE, MENU_OPTION, COLOR_WHITE, COLOR_YELLOW
 
 
 class Menu:
@@ -13,6 +13,7 @@ class Menu:
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self, ):
+        menu_option = 0
         pygame.mixer_music.load('./assets/Sounds/BGM7 Twilight Battle.wav')
         pygame.mixer_music.play(-1)
 
@@ -21,15 +22,21 @@ class Menu:
             self.menu_text(80, "Invaders Zone", COLOR_ORANGE, ((WINDOW_WIDTH / 2), 280))
 
             for i in range(len(MENU_OPTION)):
-                self.menu_text(35, MENU_OPTION[i], COLOR_WHITE, ((WINDOW_WIDTH / 2), 380 + 50 * i))
-
-            pygame.display.flip()
+                if i == menu_option:
+                    self.menu_text(35, MENU_OPTION[i], COLOR_YELLOW, ((WINDOW_WIDTH / 2), 380 + 50 * i))
+                else:
+                    self.menu_text(35, MENU_OPTION[i], COLOR_WHITE, ((WINDOW_WIDTH / 2), 380 + 50 * i))
 
             # Check for all events
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                    pygame.quit() # Close window
                    quit() # End pygame
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_DOWN:
+                        menu_option += 1
+
+            pygame.display.flip()
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
         text_font: Font = pygame.font.SysFont(name="Gentium Book Basic", size=text_size)
