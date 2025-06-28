@@ -1,6 +1,6 @@
 import pygame.key
 
-from code.Const import ENTITY_SPEED, WINDOW_HEIGHT
+from code.Const import ENTITY_SPEED, WINDOW_HEIGHT, WINDOW_WIDTH
 from code.Entity import Entity
 
 class Player(Entity):
@@ -14,4 +14,8 @@ class Player(Entity):
             self.rect.centery -= ENTITY_SPEED[self.name]
         if pressed_key[pygame.K_DOWN] and self.rect.bottom < 520:
             self.rect.centery += ENTITY_SPEED[self.name]
+        if pressed_key[pygame.K_LEFT] and self.rect.left > 10:
+            self.rect.centerx -= ENTITY_SPEED[self.name]
+        if pressed_key[pygame.K_RIGHT] and self.rect.right < WINDOW_WIDTH:
+            self.rect.centerx += ENTITY_SPEED[self.name]
         pass
