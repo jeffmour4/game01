@@ -8,7 +8,7 @@ COLOR_YELLOW = (227, 219, 25)
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
 
-ENEMY_Y_START = 250
+ENEMY_Y_START = 200
 ENEMY_Y_END = 500
 
 ENTITY_SPEED = {
@@ -18,6 +18,16 @@ ENTITY_SPEED = {
     'Player' : 4,
     'Enemy1' : 2,
     'Enemy2' : 3,
+}
+
+ENTITY_HEALTH = {
+    'Level1Bg0': 999,
+    'Level1Bg1': 999,
+    'Level1Bg2': 999,
+    'Player': 300,
+    'PlayerShot': 25,
+    'Enemy1': 75,
+    'Enemy2': 50,
 }
 
 # M
