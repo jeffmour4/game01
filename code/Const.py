@@ -18,6 +18,7 @@ ENTITY_SPEED = {
     'Player' : 4,
     'Enemy1' : 2,
     'Enemy2' : 3,
+    'PlayerShot' : 7,
 }
 
 ENTITY_HEALTH = {
@@ -30,8 +31,17 @@ ENTITY_HEALTH = {
     'Enemy2': 50,
 }
 
+ENTITY_SHOT_DELAY = {
+    'Player': 20,
+}
+
 # M
 MENU_OPTION = ('NEW GAME', 'SCORE', 'EXIT')
+
+# P
+PLAYER_KEY_SHOOT = {
+    'Player': pygame.K_LCTRL
+}
 
 # S
 SPAWN_TIME = 2000
