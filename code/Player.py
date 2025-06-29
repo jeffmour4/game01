@@ -18,4 +18,5 @@ class Player(Entity):
             self.rect.centerx -= ENTITY_SPEED[self.name]
         if pressed_key[pygame.K_RIGHT] and self.rect.right < WINDOW_WIDTH:
             self.rect.centerx += ENTITY_SPEED[self.name]
+        #if pressed_key[pygame.K_LCTRL]
         pass
