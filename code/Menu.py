@@ -2,7 +2,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WINDOW_WIDTH, COLOR_ORANGE, MENU_OPTION, COLOR_WHITE, COLOR_YELLOW
+from code.Const import WINDOW_WIDTH, C_ORANGE, MENU_OPTION, C_WHITE, C_YELLOW
 
 
 class Menu:
@@ -20,13 +20,13 @@ class Menu:
         while True:
             # Draw images
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(80, "Invaders Zone", COLOR_ORANGE, ((WINDOW_WIDTH / 2), 280))
+            self.menu_text(80, "Invaders Zone", C_ORANGE, ((WINDOW_WIDTH / 2), 280))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(35, MENU_OPTION[i], COLOR_YELLOW, ((WINDOW_WIDTH / 2), 380 + 50 * i))
+                    self.menu_text(35, MENU_OPTION[i], C_YELLOW, ((WINDOW_WIDTH / 2), 380 + 50 * i))
                 else:
-                    self.menu_text(35, MENU_OPTION[i], COLOR_WHITE, ((WINDOW_WIDTH / 2), 380 + 50 * i))
+                    self.menu_text(35, MENU_OPTION[i], C_WHITE, ((WINDOW_WIDTH / 2), 380 + 50 * i))
 
             pygame.display.flip()
 

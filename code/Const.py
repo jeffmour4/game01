@@ -1,9 +1,11 @@
 # C
 import pygame
 
-COLOR_ORANGE = (209, 72, 0)
-COLOR_WHITE = (255, 255, 255)
-COLOR_YELLOW = (227, 219, 25)
+C_ORANGE = (209, 72, 0)
+C_WHITE = (255, 255, 255)
+C_YELLOW = (227, 219, 25)
+C_BLUE = (0, 0, 128)
+C_CYAN = (0,128, 128)
 
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -33,6 +35,26 @@ ENTITY_HEALTH = {
 
 ENTITY_SHOT_DELAY = {
     'Player': 20,
+}
+
+ENTITY_DAMAGE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Player': 1,
+    'PlayerShot': 25,
+    'Enemy1': 25,
+    'Enemy2': 25,
+}
+
+ENTITY_SCORE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Player': 0,
+    'PlayerShot': 0,
+    'Enemy1': 100,
+    'Enemy2': 100,
 }
 
 # M
