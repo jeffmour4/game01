@@ -14,7 +14,7 @@ class Menu:
 
     def run(self, ):
         menu_option = 0
-        pygame.mixer_music.load('./assets/Sounds/BGM7 Twilight Battle.wav')
+        pygame.mixer_music.load('./assets/BGM7 Twilight Battle.wav')
         pygame.mixer_music.play(-1)
 
         while True:
